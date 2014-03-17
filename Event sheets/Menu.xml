@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <event-group description="" sid="9425777252301529" title="On Click" />
+        <event-block sid="5064366218429091">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6726291556566489" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BtnOption</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4158737080948433" type="System">
+                    <param id="0" name="Layout">Option</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6483342148738039">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7993008840660217" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BtnBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1433088845314023" type="System">
+                    <param id="0" name="Layout">Title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2180283515840751">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8593895240276521" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BtnPlay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7279152558625691" type="System">
+                    <param id="0" name="Layout">Stage 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="877883565808608">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7892210380721183" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="885505414737028" type="BtnPlay">
+                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                </action>
+                <action id="-1" name="Set X" sid="8875281028062746" type="BtnOption">
+                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4090313083264424">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9593926576209061" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="5490466846493377" type="BtnPlay">
+                    <param id="0" name="X">-160</param>
+                </action>
+                <action id="-1" name="Set X" sid="1321323156892772" type="BtnOption">
+                    <param id="0" name="X">800</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1844929822396686">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8161867212181919" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6839581172581405" type="BtnMusicOn">
+                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                </action>
+                <action id="-1" name="Set X" sid="9956145192489715" type="BtnSoundOn">
+                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                </action>
+                <action id="-1" name="Set X" sid="2057961355699182" type="BtnCredits">
+                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2336414319984155">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8123086316858648" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6547125251635095" type="BtnMusicOn">
+                    <param id="0" name="X">-160</param>
+                </action>
+                <action id="-1" name="Set X" sid="6497993604071087" type="BtnSoundOn">
+                    <param id="0" name="X">800</param>
+                </action>
+                <action id="-1" name="Set X" sid="5721880624706705" type="BtnCredits">
+                    <param id="0" name="X">-160</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
