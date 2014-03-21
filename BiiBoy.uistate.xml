@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Title</layout>
+        <layout>Title</layout>
         <layout>Stage 1 raw</layout>
         <layout>Option</layout>
         <layout>Stage 1</layout>
         <event-sheet>Stage 1 raw</event-sheet>
-        <event-sheet>Menu</event-sheet>
+        <event-sheet active="1">Menu</event-sheet>
         <event-sheet>Stage 1</event-sheet>
     </open-tabs>
     <properties>
@@ -24,7 +24,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
-        <family expanded="1" name="MenuSprites" />
-    </families-expanded>
+    <families-expanded root="1" />
 </c2uistate>

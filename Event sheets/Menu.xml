@@ -5,13 +5,7 @@
     <events>
         <event-group description="" sid="9425777252301529" title="On Click" />
         <event-block sid="5064366218429091">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="6726291556566489" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">BtnOption</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-2" name="Go to layout" sid="4158737080948433" type="System">
                     <param id="0" name="Layout">Option</param>
@@ -33,41 +27,35 @@
             </actions>
         </event-block>
         <event-block sid="2180283515840751">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="8593895240276521" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">BtnPlay</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-2" name="Go to layout" sid="7279152558625691" type="System">
                     <param id="0" name="Layout">Stage 1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="877883565808608">
+        <event-block sid="7943445627559293">
             <conditions>
-                <condition id="-1" name="Every tick" sid="7892210380721183" type="System" />
+                <condition id="-1" name="Every tick" sid="4672521812644921" type="System" />
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="885505414737028" type="BtnPlay">
-                    <param id="0" name="X">Self.X+(310-Self.X)/10</param>
+                <action id="-1" name="Set X" sid="6672152875973079" type="BtnPlay">
+                    <param id="0" name="X">Self.X+(235-Self.X)/10</param>
                 </action>
-                <action id="-1" name="Set X" sid="8875281028062746" type="BtnOption">
-                    <param id="0" name="X">Self.X+(310-Self.X)/10</param>
+                <action id="-1" name="Set X" sid="5644847718549769" type="BtnOption">
+                    <param id="0" name="X">Self.X+(235-Self.X)/10</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4090313083264424">
+        <event-block sid="1399302670648777">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="9593926576209061" type="System" />
+                <condition id="-2" name="On start of layout" sid="7219434663425939" type="System" />
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="5490466846493377" type="BtnPlay">
+                <action id="-1" name="Set X" sid="1977390049680152" type="BtnPlay">
                     <param id="0" name="X">-160</param>
                 </action>
-                <action id="-1" name="Set X" sid="1321323156892772" type="BtnOption">
+                <action id="-1" name="Set X" sid="6570410165903469" type="BtnOption">
                     <param id="0" name="X">800</param>
                 </action>
             </actions>
@@ -101,6 +89,18 @@
                 </action>
                 <action id="-1" name="Set X" sid="5721880624706705" type="BtnCredits">
                     <param id="0" name="X">-160</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8683451803357019">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2638398873259462" type="Mouse">
+                    <param id="0" name="Object">BtnPlay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="6609612073262227" type="BtnPlay">
+                    <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
         </event-block>

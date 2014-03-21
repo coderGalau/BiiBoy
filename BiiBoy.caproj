@@ -11,19 +11,19 @@
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -52,15 +52,7 @@
             </object-type>
         </object-folder>
         <object-folder expanded="1" name="Menu">
-            <object-folder expanded="0" name="Button">
-                <object-type name="BtnPlay" sid="4332855129232809">
-                    <plugin id="TiledBg" />
-                    <texture />
-                </object-type>
-                <object-type name="BtnOption" sid="6579512703565676">
-                    <plugin id="TiledBg" />
-                    <texture />
-                </object-type>
+            <object-folder expanded="1" name="Button">
                 <object-type name="BtnSoundOn" sid="4957353628308291">
                     <plugin id="TiledBg" />
                     <texture />
@@ -80,6 +72,68 @@
                 <object-type name="BtnPlayHover" sid="2901756326911377">
                     <plugin id="TiledBg" />
                     <texture />
+                </object-type>
+                <object-type name="BtnPlay" sid="1754075828953447">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2912885137468304" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
+                                <collision-poly>
+                                    <point x="0.045" y="0.130435" />
+                                    <point x="0.5" y="0.0144928" />
+                                    <point x="0.955" y="0.130435" />
+                                    <point x="0.99" y="0.492754" />
+                                    <point x="0.955" y="0.869565" />
+                                    <point x="0.5" y="0.942029" />
+                                    <point x="0.05" y="0.855072" />
+                                    <point x="0.01" y="0.492754" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
+                                <collision-poly>
+                                    <point x="0.045" y="0.130435" />
+                                    <point x="0.5" y="0.0144928" />
+                                    <point x="0.955" y="0.130435" />
+                                    <point x="0.99" y="0.492754" />
+                                    <point x="0.955" y="0.869565" />
+                                    <point x="0.5" y="0.942029" />
+                                    <point x="0.05" y="0.855072" />
+                                    <point x="0.01" y="0.492754" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BtnOption" sid="8917097424408913">
+                    <plugin id="Sprite" />
+                    <animation-folder expanded="1">
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="714317673682629" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
+                                <collision-poly>
+                                    <point x="0.045" y="0.130435" />
+                                    <point x="0.5" y="0.0144928" />
+                                    <point x="0.955" y="0.130435" />
+                                    <point x="0.99" y="0.492754" />
+                                    <point x="0.955" y="0.869565" />
+                                    <point x="0.5" y="0.942029" />
+                                    <point x="0.05" y="0.855072" />
+                                    <point x="0.01" y="0.492754" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
+                                <collision-poly>
+                                    <point x="0.045" y="0.130435" />
+                                    <point x="0.5" y="0.0144928" />
+                                    <point x="0.955" y="0.130435" />
+                                    <point x="0.99" y="0.492754" />
+                                    <point x="0.955" y="0.869565" />
+                                    <point x="0.5" y="0.942029" />
+                                    <point x="0.05" y="0.855072" />
+                                    <point x="0.01" y="0.492754" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-folder expanded="0" name="Background">
@@ -108,7 +162,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="Stage 1">
+        <object-folder expanded="1" name="Stage 1">
             <object-folder expanded="1" name="Background">
                 <object-type name="Bg1" sid="7734353967578229">
                     <plugin id="TiledBg" />
@@ -606,19 +660,7 @@
             </animation-folder>
         </object-type>
     </object-folder>
-    <families>
-        <family name="MenuSprites" plugin-id="TiledBg" sid="9116033396654529">
-            <members>
-                <member>BtnOption</member>
-                <member>BtnPlay</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="Type" sid="7007493177170277" type="string" />
-                <instance-variable name="Destination" sid="6127443550869724" type="string" />
-                <instance-variable name="Layer" sid="8557427851321182" type="string" />
-            </instance-variables>
-        </family>
-    </families>
+    <families />
     <layout-folder expanded="1">
         <layout-folder expanded="1" name="Menu">
             <layout>Title.xml</layout>
