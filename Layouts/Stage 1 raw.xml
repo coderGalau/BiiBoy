@@ -554,11 +554,11 @@
                         <x>304</x>
                         <y>720</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>235</width>
+                        <height>151</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502127647</hotspotX>
+                        <hotspotY>0.503311276</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -576,16 +576,16 @@
                         <x>208</x>
                         <y>688</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>235</width>
+                        <height>151</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502127647</hotspotX>
+                        <hotspotY>0.503311276</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TempatSampah" uid="23">
+                <instance type="TempatSampahOrganik" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -612,16 +612,16 @@
                         <x>368</x>
                         <y>736</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>213</width>
+                        <height>439</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50234741</hotspotX>
+                        <hotspotY>0.501138926</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TempatSampah" uid="24">
+                <instance type="TempatSampahOrganik" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -648,16 +648,16 @@
                         <x>432</x>
                         <y>344</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>213</width>
+                        <height>439</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50234741</hotspotX>
+                        <hotspotY>0.501138926</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TempatSampah" uid="25">
+                <instance type="TempatSampahOrganik" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -684,11 +684,11 @@
                         <x>889</x>
                         <y>444</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>213</width>
+                        <height>439</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50234741</hotspotX>
+                        <hotspotY>0.501138926</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -706,11 +706,11 @@
                         <x>320</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>235</width>
+                        <height>151</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502127647</hotspotX>
+                        <hotspotY>0.503311276</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -877,11 +877,11 @@
                         <x>632</x>
                         <y>397</y>
                         <z>0</z>
-                        <width>521</width>
-                        <height>187</height>
+                        <width>242</width>
+                        <height>94</height>
                         <depth>0</depth>
-                        <hotspotX>0.499040306</hotspotX>
-                        <hotspotY>0.497326195</hotspotY>
+                        <hotspotX>0.983471096</hotspotX>
+                        <hotspotY>0.829787254</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -939,6 +939,7 @@
                     </properties>
                     <instance-variables>
                         <HP>0</HP>
+                        <isJump>0</isJump>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -962,11 +963,11 @@
                         <x>371</x>
                         <y>331</y>
                         <z>0</z>
-                        <width>57</width>
-                        <height>117</height>
+                        <width>385</width>
+                        <height>792</height>
                         <depth>0</depth>
-                        <hotspotX>0.508771956</hotspotX>
-                        <hotspotY>0.504273534</hotspotY>
+                        <hotspotX>0.501298726</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1055,11 +1056,11 @@
                         <x>6</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>92</width>
-                        <height>53</height>
+                        <width>117</width>
+                        <height>31</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0.490566045</hotspotY>
+                        <hotspotY>0.483870953</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -52,10 +52,10 @@
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="885505414737028" type="BtnPlay">
-                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                    <param id="0" name="X">Self.X+(310-Self.X)/10</param>
                 </action>
                 <action id="-1" name="Set X" sid="8875281028062746" type="BtnOption">
-                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                    <param id="0" name="X">Self.X+(310-Self.X)/10</param>
                 </action>
             </actions>
         </event-block>
@@ -78,13 +78,13 @@
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="6839581172581405" type="BtnMusicOn">
-                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                    <param id="0" name="X">Self.X+(235-Self.X)/10</param>
                 </action>
                 <action id="-1" name="Set X" sid="9956145192489715" type="BtnSoundOn">
-                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                    <param id="0" name="X">Self.X+(235-Self.X)/10</param>
                 </action>
                 <action id="-1" name="Set X" sid="2057961355699182" type="BtnCredits">
-                    <param id="0" name="X">Self.X+(320-Self.X)/10</param>
+                    <param id="0" name="X">Self.X+(235-Self.X)/10</param>
                 </action>
             </actions>
         </event-block>

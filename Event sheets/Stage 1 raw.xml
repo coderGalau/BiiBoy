@@ -5,8 +5,6 @@
     <events>
         <variable constant="0" name="Pause" sid="7706055207444615" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="9356327350010959" static="0" type="number">0</variable>
-        <variable constant="0" name="detik" sid="2172403765344076" static="0" type="number">0</variable>
-        <variable constant="0" name="menit" sid="2127837251543042" static="0" type="number">0</variable>
         <variable constant="0" name="score" sid="6667456809118404" static="0" type="number">0</variable>
         <variable constant="0" name="Total" sid="9359660315404933" static="0" type="number">0</variable>
         <variable constant="0" name="PengangSampah" sid="1530286162442541" static="0" type="number">0</variable>
@@ -135,8 +133,8 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="787200980903448" type="Sampah" />
-                <action id="4" name="Set animation" sid="111286960306321" type="Player">
-                    <param id="0" name="Animation">&quot;PegangSampah&quot;</param>
+                <action id="4" name="Set animation" sid="5436007216443603" type="Player">
+                    <param id="0" name="Animation">&quot;pick&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="7426605771759907" type="System">
@@ -148,14 +146,14 @@
         <event-block sid="4037055833530822">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="7766774867635967" type="Player">
-                    <param id="0" name="Object">TempatSampah</param>
+                    <param id="0" name="Object">TempatSampahOrganik</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="767162730877494" type="System">
                     <param id="0" name="First value">PengangSampah</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">1</param>
                 </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="140366619753456" type="TempatSampah">
+                <condition id="2" inverted="1" name="Is playing" sid="140366619753456" type="TempatSampahOrganik">
                     <param id="0" name="Animation">&quot;Penuh&quot;</param>
                 </condition>
                 <condition id="2" name="Key is down" sid="8349437528641485" type="Keyboard">
@@ -163,7 +161,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="9536792538176575" type="TempatSampah">
+                <action id="4" name="Set animation" sid="9536792538176575" type="TempatSampahOrganik">
                     <param id="0" name="Animation">&quot;Penuh&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -287,11 +285,44 @@
                 <condition id="2" name="Key is down" sid="9749649139128772" type="Keyboard">
                     <param id="0" name="Key">87 (W)</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="7823570391157695" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="7823570391157695" type="Keyboard">
                     <param id="0" name="Key">38 (Up arrow)</param>
                 </condition>
             </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="7700294307517307">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8437944559560634" type="Player">
+                            <param id="0" name="Instance variable">isJump</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9928197333032492" type="Player">
+                            <param id="0" name="Instance variable">isJump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="609334975068495" type="SoundJump">
+                            <param id="0" name="Audio file">Jump</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">Player</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2917990579133842">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="635076950413461" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="8008293963469721">
             <conditions>
@@ -440,6 +471,176 @@
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="6755904488134749">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="6841223948594882" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9588066098592431" type="Player">
+                    <param id="0" name="Instance variable">isJump</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9276157765289075">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6773288091862226" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7058865270646204" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6561752642891589">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="603820628924106" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7250550390018442" type="Player">
+                            <param id="0" name="Animation">&quot;standbarang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9670518183827808">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="7842669821775313" type="Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3254927900033093">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="931070521502804" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1229671476755513" type="Player">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3401850405347572">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9697619297353531" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5226534209135741" type="Player">
+                            <param id="0" name="Animation">&quot;runbarang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="7982465181322011">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5407015108709747" type="Player">
+                    <param id="0" name="Instance variable">isJump</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4178609495129442">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4334751240733385" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="6983898577197246" type="Player">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4538633196972921" type="Player">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313523656406962">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3698190621902189" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="8979570767632426" type="Player">
+                            <param id="0" name="Animation">&quot;jumpbarang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8129137396758581" type="Player">
+                            <param id="0" name="Animation">&quot;jumpbarang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3033905427806276">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="4632582542577336" type="Player" />
+                <condition id="2" inverted="1" name="Is playing" sid="2347142501279723" type="Player">
+                    <param id="0" name="Animation">&quot;pick&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2001253608713695">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5018389468960125" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8567701746979223" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2746051723868623">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9128392059386376" type="System">
+                            <param id="0" name="Variable">PengangSampah</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2596878189580493" type="Player">
+                            <param id="0" name="Animation">&quot;standbarang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
